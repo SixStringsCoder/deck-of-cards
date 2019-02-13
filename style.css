@@ -1,0 +1,113 @@
+#card-table {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #256d40;
+  padding: 20px;
+}
+
+@keyframes flipCard {
+  from { -webkit-transform: rotateY(0deg); /* Safari */
+  transform: rotateY(0deg); /* Standard syntax */}
+  to{  -webkit-transform: rotateY(90deg); /* Safari */
+  transform: rotateY(90deg); /* Standard syntax */}
+}
+
+.card {
+  width: 240px;
+  height: 320px;
+  border: 1px solid black;
+  border-radius: 5%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 1);
+  margin: 5px;
+/*   animation-name: flipCard;
+  animation-duration: 1s; */
+}
+
+#card-left-side,
+#card-right-side,
+#card-center {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+}
+
+#card-left-side {
+/*   margin: 0 10px; */
+}
+
+#card-center {
+  align-self: center;
+  justify-content: center;
+  font-size: 7em;
+  padding: 0 20px;
+}
+
+#card-right-side {
+/*   margin: 0 10px; */
+  transform: rotate(180deg);
+}
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
+
+.back-of-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background: #191915;
+}
+
+.stripe {
+  width: 100%;
+  height: 1px;
+  margin: 1px 0;
+}
+
+.stripe:nth-child(even) {
+  background-color: #AD271D;
+  transform: rotate(-45deg);
+}
+
+.stripe:nth-child(odd) {
+  background-color: #AD271D;
+  transform: rotate(45deg);
+}
+
+.card-wording {
+  align-self: center;
+  position: absolute;
+  z-index: 1;
+  width: 230px;
+  display: flex;
+  justify-content: center;
+}
+p {
+  font-family: Merriweather, serif;
+  width: 70px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #FFF;
+  background: rgba(0, 0, 0, .7);
+  padding: 20px;
+  border-radius: 50%;
+  line-height: 150%;
+}
